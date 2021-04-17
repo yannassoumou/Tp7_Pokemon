@@ -1,0 +1,16 @@
+<p>my-component works!</p>
+<label for="">Entrer l'id du pokemon</label>
+<input [(ngModel)]="id">
+<br>
+<input readonly [(ngModel)]="id" >
+<br>
+<label for="">Selectionner un pokemon</label>
+<select [(ngModel)]="selectedPokeid" >
+  <option [value]="pokemon.id" *ngFor="let pokemon of listPokemon">{{pokemon.nom}}</option>
+</select>
+<br>
+<input readonly [(ngModel)]="selectedPokeid">
+<br>
+<ul>
+  <li *ngFor="let pokemon of listPokemon" >{{pokemon.nom}}</li>
+</ul>
